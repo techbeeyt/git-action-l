@@ -65,7 +65,7 @@ def model_slicing(data):
 
 
 if __name__ == '__main__':
-    df = load_data('/Users/ehabx/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc/LocalState/rootfs/home/ehabxylo/project-3/clean_data.csv')
+    df = load_data('C:\Users\ehabx\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc\LocalState\rootfs\home\ehabxylo\project-3\data\clean_data.csv')
     train, test = split_data(df)
     test.to_csv('testings.csv')
     X_train, y_train, encoder, lb = process_data(
