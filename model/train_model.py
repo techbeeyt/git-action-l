@@ -8,10 +8,6 @@ from model_functions import train_model, \
     compute_model_metrics, model_predictions
 from joblib import dump
 
-
-# Add the necessary imports for the starter code.
-
-# Add code to load in the data.
 logging.basicConfig(
     filename='./log',
     level=logging.INFO,
@@ -27,9 +23,6 @@ def split_data(data):
         logging.info('Error!:Error whiles splitting data')
 
 
-
-
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
 cat_features = [
     "workclass",
     "education",
@@ -72,7 +65,7 @@ def model_slicing(data):
 
 
 if __name__ == '__main__':
-    df = load_data('/Users/ehabx/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc/LocalState/rootfs/home/ehabxylo/project-3/data')
+    df = load_data('/Users/ehabx/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc/LocalState/rootfs/home/ehabxylo/project-3/clean_data.csv')
     train, test = split_data(df)
     test.to_csv('testings.csv')
     X_train, y_train, encoder, lb = process_data(
