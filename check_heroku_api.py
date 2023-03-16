@@ -13,7 +13,7 @@ df = {
     "hoursPerWeek": 40,
     "nativeCountry": "United-States"
     }
-r = requests.post('https://mlops-salaries.herokuapp.com', json=df)
+r = requests.post('https://project3-app.herokuapp.com', json=df)
 
 assert r.status_code == 200
 
